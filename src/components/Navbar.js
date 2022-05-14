@@ -39,6 +39,8 @@ export const Navbar = () => {
             <Link href="#reviews">Reviews</Link>
           </HStack>
           <Button
+            as="a"
+            href="tel:+1-647-696-6639"
             leftIcon={<Phone />}
             rounded="full"
             ml="auto"
