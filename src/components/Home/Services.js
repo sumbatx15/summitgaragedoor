@@ -111,7 +111,7 @@ export const Services = (props) => {
         <Stack spacing="4" align="center" textAlign="center">
           <Stack spacing="0">
             <Heading fontSize={["4xl", "3xl"]}>
-              We probably can help you 😉
+              We can probably help you 😉
             </Heading>
             <Text fontSize="xl">Call us at any moment</Text>
           </Stack>
