@@ -1,6 +1,16 @@
-import { Box, Container, HStack, Img } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Circle,
+  Container,
+  DarkMode,
+  HStack,
+  Img,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import Link from "next/link";
-import { Menu } from "react-feather";
+import { Menu, Phone } from "react-feather";
 import { useWindowScroll } from "react-use";
 
 export const MobileNavbar = () => {
@@ -21,6 +31,23 @@ export const MobileNavbar = () => {
       <Container maxW="container.lg">
         <HStack align="center" justify="space-between">
           <Img src="/logo-white.svg" h="10" />
+          <DarkMode>
+            <Button
+              leftIcon={<Phone />}
+              rounded="full"
+              ml="auto"
+              colorScheme="gray"
+              variant="outline"
+            >
+              <Stack fontSize="sm" fontWeight="medium" spacing="0">
+                <HStack spacing="4px">
+                  <Circle bg="green.400" size="2" />
+                  <Text color="green.400">Open</Text>
+                </HStack>
+                <Text fontSize="xs">24/7 Emergency Service</Text>
+              </Stack>
+            </Button>
+          </DarkMode>
           <Menu />
         </HStack>
       </Container>

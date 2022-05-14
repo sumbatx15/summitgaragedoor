@@ -51,18 +51,18 @@ export const Header = () => {
             </Show>
 
             <Stack>
-              {/* <HStack>
+              <HStack>
                 <Img src="/CA.svg" h="4" />
                 <Text>Ottawa Canada</Text>
-              </HStack> */}
-              <HStack>
-                {/* <Img src="/CA.svg" h="4" />
-                <Text>Ottawa Canada</Text> */}
+              </HStack>
+              {/* <HStack>
+               <Img src="/CA.svg" h="4" />
+                <Text>Ottawa Canada</Text> 
                 <Circle bg="green.400" size="4" />
                 <Text>Hours:</Text>
                 <Text color="green.400">Open</Text>
                 <Text>24/7</Text>
-              </HStack>
+              </HStack>*/}
               <Heading fontSize={[32, 42, 54]} fontWeight="bold">
                 Top-rated Garage door repair service in Ottawa
               </Heading>
