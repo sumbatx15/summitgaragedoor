@@ -25,7 +25,7 @@ export const FixedDoors = () => {
             as="a"
             href="tel:+1-647-696-6639"
             size="lg"
-            colorScheme="orange"
+            colorScheme="primary"
             rounded="full"
             py="7"
             maxW="md"

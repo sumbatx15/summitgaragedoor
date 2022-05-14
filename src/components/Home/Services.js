@@ -38,67 +38,67 @@ export const Services = (props) => {
             />
             <Stack flex="1" wrap="wrap" ml="-2" divider={<Divider />}>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Repair
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Commercial Overhead Door Repair
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Spring, Cables, Rollers, Hinges and Track Repairs
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Installation
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Opener Repair
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Opener Installation
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Replacement
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Off Track Garage Door Repair
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Garage Door Tune-Up And Safety Inspections
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   Wireless Keypads And Remotes
                 </Text>
               </HStack>
               <HStack>
-                <Check size="1em" stroke="var(--chakra-colors-orange-500)" />
+                <Check size="1em" stroke="var(--chakra-colors-primary-500)" />
                 <Text fontSize="md" fontWeight="medium">
                   24 Hours Emergency Garage Door Repair
                 </Text>
@@ -120,7 +120,7 @@ export const Services = (props) => {
               as="a"
               href="tel:+1-647-696-6639"
               size="lg"
-              colorScheme="orange"
+              colorScheme="primary"
               rounded="full"
               py="7"
               maxW="md"

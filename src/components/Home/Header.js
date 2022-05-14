@@ -69,15 +69,15 @@ export const Header = () => {
             </Stack>
             <Stack fontSize={["md", "lg", "2xl"]}>
               <HStack>
-                <Check stroke="var(--chakra-colors-orange-500)" />
+                <Check stroke="var(--chakra-colors-primary-500)" />
                 <Text>Thousands of satisfied customers</Text>
               </HStack>
               <HStack>
-                <Star stroke="var(--chakra-colors-orange-500)" />
+                <Star stroke="var(--chakra-colors-primary-500)" />
                 <Text>Quick Responses and 5-Star Service</Text>
               </HStack>
               <HStack>
-                <Check stroke="var(--chakra-colors-orange-500)" />
+                <Check stroke="var(--chakra-colors-primary-500)" />
                 <Text>Best Prices in the Local Market</Text>
               </HStack>
             </Stack>
@@ -85,7 +85,7 @@ export const Header = () => {
               as="a"
               href="tel:+1-647-696-6639"
               size="lg"
-              colorScheme="orange"
+              colorScheme="primary"
               rounded="full"
               py="7"
               maxW="md"
