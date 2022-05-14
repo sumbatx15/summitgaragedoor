@@ -37,7 +37,7 @@ export const WhyChooseUs = () => {
               <Heading size="md">5 year warranty</Heading>
               <Text>
                 Summit garage doors also have five years labor and parts
-                warranty for all our services; you definitely can't get this
+                warranty for all our services; you definitely can&#39;t get this
                 anywhere.
               </Text>
             </Stack>
