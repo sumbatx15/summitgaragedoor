@@ -17,6 +17,7 @@ import { FiveStar } from "../FiveStar";
 export const Header = () => {
   return (
     <Box
+      id="header"
       flex="1"
       pt={[5, "inherit"]}
       pb={["14", "inherit"]}

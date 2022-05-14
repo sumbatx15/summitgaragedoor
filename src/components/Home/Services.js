@@ -15,7 +15,7 @@ import { Check, Phone } from "react-feather";
 
 export const Services = (props) => {
   return (
-    <Box py="10" >
+    <Box id="services" py="10">
       <Container maxW="container.lg" py={[10]}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">

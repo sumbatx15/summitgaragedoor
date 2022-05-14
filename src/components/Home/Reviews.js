@@ -3,7 +3,7 @@ import { Review } from "../Review";
 
 export const Reviews = (props) => {
   return (
-    <Box py="10">
+    <Box id="reviews" py="10">
       <Container maxW="container.lg" py={[10]}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">

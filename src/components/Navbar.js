@@ -17,12 +17,12 @@ export const Navbar = () => {
       shadow={shadow}
     >
       <Container maxW="container.lg">
-        <HStack>
+        <HStack spacing="10">
           <Img src="/logo.svg" h={"50px"} transition="height 50ms" />
-          <Link href="/home">Home</Link>
-          <Link href="/">Home</Link>
-          <Link href="/">Home</Link>
-          <Link href="/">Home</Link>
+          <Link href="#header">Home</Link>
+          <Link href="#services">Services</Link>
+          <Link href="#whyus">Why choose us</Link>
+          <Link href="#reviews">Reviews</Link>
         </HStack>
       </Container>
     </Box>
