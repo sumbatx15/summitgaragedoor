@@ -34,23 +34,28 @@ export const ContactUs = () => {
             <Stack spacing={4} flex="1" direction={["column", "row"]}>
               <Stack flex={1} spacing="4">
                 <FormControl>
-                  <FormLabel htmlFor="name">Name</FormLabel>
+                  <FormLabel htmlFor="given-name">Name</FormLabel>
                   <InputGroup>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<User size="1em" />}
                     />
-                    <Input name="fullname" required id="name" />
+                    <Input
+                      autoComplete="on"
+                      name="given-name"
+                      required
+                      id="given-name"
+                    />
                   </InputGroup>
                 </FormControl>
                 <FormControl>
-                  <FormLabel htmlFor="phone">Phone</FormLabel>
+                  <FormLabel htmlFor="tel">Phone</FormLabel>
                   <InputGroup>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<Phone size="1em" />}
                     />
-                    <Input name="tel" type="tel" id="phone" />
+                    <Input autoComplete="on" name="tel" type="tel" id="tel" />
                   </InputGroup>
                 </FormControl>
                 <FormControl>
@@ -60,17 +65,22 @@ export const ContactUs = () => {
                       pointerEvents="none"
                       children={<AtSign size="1em" />}
                     />
-                    <Input name="email" type="email" id="email" />
+                    <Input
+                      autoComplete="on"
+                      name="email"
+                      type="email"
+                      id="email"
+                    />
                   </InputGroup>
                 </FormControl>
                 <FormControl>
-                  <FormLabel htmlFor="address">Address</FormLabel>
+                  <FormLabel htmlFor="street-address">Address</FormLabel>
                   <InputGroup>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<Home size="1em" />}
                     />
-                    <Input name="address" id="address" />
+                    <Input autoComplete="on" name="street-address" id="street-address" />
                   </InputGroup>
                 </FormControl>
                 <FormControl flex="1.5" h="full">
