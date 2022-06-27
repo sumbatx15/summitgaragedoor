@@ -8,13 +8,17 @@ import {
   Img,
   Stack,
   Text,
+  useDisclosure
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { Menu, Phone } from "react-feather";
 import { useWindowScroll } from "react-use";
+import { NavigationDrawer } from "./NavigationDrawer";
 
 export const MobileNavbar = () => {
   const { x, y } = useWindowScroll();
+  const drawerController = useDisclosure();
+  console.log('drawerController:', drawerController)
+
   const shadow = y > 0 ? "xl" : "";
   return (
     <Box
@@ -50,7 +54,11 @@ export const MobileNavbar = () => {
               </Stack>
             </Button>
           </DarkMode>
-          <Menu />
+          <Menu onClick={() => {
+            console.log('click')
+            drawerController.onOpen()
+          }} />
+          <NavigationDrawer {...drawerController} />
         </HStack>
       </Container>
     </Box>

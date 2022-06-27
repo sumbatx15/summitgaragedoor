@@ -1,6 +1,7 @@
 import { Divider, Show, Stack } from "@chakra-ui/react";
 import { Navbar } from "src/components/Navbar";
 import { MobileNavbar } from "../MobileNavbar";
+import { ContactUs } from "./ContactUs";
 import { FixedDoors } from "./FixedDoors";
 import { Header } from "./Header";
 import { Reviews } from "./Reviews";
@@ -24,6 +25,7 @@ export const Home = () => {
         <WhyChooseUs />
         <FixedDoors />
         <Reviews />
+        <ContactUs />
       </Stack>
     </>
   );

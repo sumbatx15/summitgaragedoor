@@ -37,6 +37,7 @@ export const Navbar = () => {
             <Link href="#services">Services</Link>
             <Link href="#whyus">Why choose us</Link>
             <Link href="#reviews">Reviews</Link>
+            <Link href="#contact-us">Contact us</Link>
           </HStack>
           <Button
             as="a"
