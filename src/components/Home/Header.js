@@ -14,18 +14,31 @@ import {
 import { Check, Phone, Star } from "react-feather";
 import { FiveStar } from "../FiveStar";
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <Box
       id="header"
       flex="1"
-      pt={[5, "inherit"]}
       pb={["14", "inherit"]}
       pos="relative"
       bg="gray.800"
       color="white"
     >
-      <Container h="full" maxW="container.lg">
+      <Show below="md">
+        <Img
+          h="180px"
+          w="full"
+          objectFit="cover"
+          // src="/header-bg.png"
+          // src="https://blog.puls.com/hubfs/Puls%20Day%2020443-455947-edited-558993-edited.jpg"
+          src="https://cdn-ffcfk.nitrocdn.com/NwIRoYzuzLhvZOoqmnUNQZyxVEfmEbCu/assets/static/optimized/wp-content/uploads/2022/03/bb852c31fffc075f97bfd0b66407b19d.GARAGE-DOOR-INSTALLATION.jpg"
+          // src="https://overheadtampa.com/wp-content/uploads/elementor/thumbs/garage-door-repair-tampa-pf38jyufe2bi0njw1puxhmmfalmgwbmtjnapzgeu7k.jpg"
+          alt="header"
+          mb="8"
+        />
+      </Show>
+
+      <Container h="full" maxW="container.lg" {...props}>
         <Flex
           direction={["column", "row"]}
           h="full"
@@ -40,16 +53,6 @@ export const Header = () => {
             h="full"
             justify={["flex-start", "center"]}
           >
-            <Show below="md">
-              <Img
-                h="36"
-                objectFit="cover"
-                rounded="lg"
-                src="/header-bg.png"
-                alt="header"
-              />
-            </Show>
-
             <Stack>
               <HStack>
                 <Img src="/CA.svg" h="4" />
@@ -73,7 +76,8 @@ export const Header = () => {
                 <Text>Thousands of satisfied customers</Text>
               </HStack>
               <HStack>
-                <Star stroke="var(--chakra-colors-primary-500)" />
+                <Check stroke="var(--chakra-colors-primary-500)" />
+
                 <Text>Quick Responses and 5-Star Service</Text>
               </HStack>
               <HStack>
@@ -137,6 +141,8 @@ export const Header = () => {
           zIndex={0}
           pos={["initial", "absolute"]}
           src="/header-bg.png"
+          // src="https://blog.puls.com/hubfs/Puls%20Day%2020443-455947-edited-558993-edited.jpg"
+          // src="https://cdn-ffcfk.nitrocdn.com/NwIRoYzuzLhvZOoqmnUNQZyxVEfmEbCu/assets/static/optimized/wp-content/uploads/2022/03/bb852c31fffc075f97bfd0b66407b19d.GARAGE-DOOR-INSTALLATION.jpg"
           alt="header"
         />
       </Show>

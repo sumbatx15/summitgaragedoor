@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Phone } from "react-feather";
 
-export const FixedDoors = () => {
+export const FixedDoorsBanner = () => {
   return (
     <Box bg="gray.800" color="white" py="10">
       <Container>

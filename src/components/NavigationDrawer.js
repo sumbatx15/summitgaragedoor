@@ -16,11 +16,11 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Grid, HelpCircle, Home, MessageSquare, Phone } from "react-feather";
+import { Grid, HelpCircle, Home, MessageSquare, Phone, PhoneCall } from "react-feather";
 
 export const NavigationDrawer = ({ isOpen, onClose, ...props }) => {
   return (
-    <Drawer isOpen={isOpen} placement="bottom" onClose={onClose} {...props}>
+    <Drawer isOpen={isOpen} placement="top" onClose={onClose} {...props}>
       <DrawerOverlay />
       <DrawerContent bg="gray.800" color="white">
         <DrawerCloseButton />
@@ -52,6 +52,12 @@ export const NavigationDrawer = ({ isOpen, onClose, ...props }) => {
               <HStack py="4" px="4" bg="gray.900" rounded="3xl">
                 <MessageSquare color="var(--chakra-colors-white)" />
                 <Text>Reviews</Text>
+              </HStack>
+            </Link>
+            <Link onClick={onClose} href="#contact-us">
+              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
+                <PhoneCall color="var(--chakra-colors-white)" />
+                <Text>Contact us</Text>
               </HStack>
             </Link>
           </Stack>

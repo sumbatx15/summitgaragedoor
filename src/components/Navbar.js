@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Phone } from "react-feather";
 import { useMouseWheel, useScroll, useWindowScroll } from "react-use";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const { x, y } = useWindowScroll();
   const shadow = y > 0 ? "xl" : "";
   return (
@@ -26,6 +26,7 @@ export const Navbar = () => {
       top="0"
       transition="box-shadow 200ms ease-in-out"
       shadow={shadow}
+      {...props}
     >
       <Container maxW="container.lg">
         <Flex align="center">

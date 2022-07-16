@@ -19,9 +19,9 @@ export const Services = (props) => {
       <Container maxW="container.lg" py={[10]}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">
-            <Square size="14" mx="auto">
+            {/* <Square size="14" mx="auto">
               <Img src="/garage-door.svg" w="full" />
-            </Square>
+            </Square> */}
             <Heading size="2xl">Our Services</Heading>
             <Text fontSize="xl">Our garage door repair services include</Text>
           </Stack>
@@ -33,8 +33,10 @@ export const Services = (props) => {
             <Img
               w={["full", "full", "50%"]}
               objectFit="cover"
-              src="/repairing.jpg"
-              rounded="xl"
+              // src="/repairing.jpg"
+              // src="https://overheadtampa.com/wp-content/uploads/elementor/thumbs/garage-door-repair-tampa-pf38jyufe2bi0njw1puxhmmfalmgwbmtjnapzgeu7k.jpg"
+              src="https://www.actiongaragedoor.com/images/garage-door-repair-maintenance-dallas-fort-worth.jpg"
+              // rounded="xl"
             />
             <Stack flex="1" wrap="wrap" ml="-2" divider={<Divider />}>
               <HStack>

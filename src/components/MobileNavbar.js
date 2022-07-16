@@ -14,10 +14,9 @@ import { Menu, Phone } from "react-feather";
 import { useWindowScroll } from "react-use";
 import { NavigationDrawer } from "./NavigationDrawer";
  
-export const MobileNavbar = () => {
+export const MobileNavbar = (props) => {
   const { x, y } = useWindowScroll();
   const drawerController = useDisclosure();
-  console.log('drawerController:', drawerController)
 
   const shadow = y > 0 ? "xl" : "";
   return (
@@ -31,6 +30,7 @@ export const MobileNavbar = () => {
       top="0"
       transition="box-shadow 200ms ease-in-out"
       shadow={shadow}
+      {...props}
     >
       <Container maxW="container.lg">
         <HStack align="center" justify="space-between">
