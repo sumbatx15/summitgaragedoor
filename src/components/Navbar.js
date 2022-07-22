@@ -36,7 +36,7 @@ export const Navbar = (props) => {
             </Stack>
             <Link href="#header">Home</Link>
             <Link href="#services">Services</Link>
-            <Link href="#whyus">Why choose us</Link>
+            <Link href="#gallery">Gallery</Link>
             <Link href="#reviews">Reviews</Link>
             <Link href="#contact-us">Contact us</Link>
           </HStack>

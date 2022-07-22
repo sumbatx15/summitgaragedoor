@@ -18,7 +18,7 @@ const images = [
 
 export const Gallery = () => {
   return (
-    <Box id="contact-us" py="10">
+    <Box id="gallery" py="10">
       <Container maxW="container.lg" py={[10]}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">

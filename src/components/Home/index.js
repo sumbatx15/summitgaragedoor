@@ -16,8 +16,8 @@ export const Home = () => {
 
   return (
     <>
-      <Show below="md" children={<MobileNavbar />} />
-      <Show above="md" children={<Navbar />} />
+      <Show below="lg" children={<MobileNavbar />} />
+      <Show above="lg" children={<Navbar />} />
       <Stack
         ref={containerRef}
         pos="relative"

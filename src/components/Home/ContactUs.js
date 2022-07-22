@@ -19,6 +19,7 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import {
   AtSign,
   Home,
@@ -30,8 +31,10 @@ import {
 } from "react-feather";
 
 export const ContactUs = () => {
+  const router = useRouter();
   const handleSubmit = (ev) => {
-    console.log("ev:", ev);
+    ev.preventDefault();
+    router.push("/thankyou");
   };
 
   return (
