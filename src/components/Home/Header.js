@@ -140,8 +140,8 @@ export const Header = (props) => {
           top="0"
           zIndex={0}
           pos={["initial", "absolute"]}
-          src="/header-bg.png"
-          // src="https://blog.puls.com/hubfs/Puls%20Day%2020443-455947-edited-558993-edited.jpg"
+          // src="/header-bg.png"
+          src="https://blog.puls.com/hubfs/Puls%20Day%2020443-455947-edited-558993-edited.jpg"
           // src="https://cdn-ffcfk.nitrocdn.com/NwIRoYzuzLhvZOoqmnUNQZyxVEfmEbCu/assets/static/optimized/wp-content/uploads/2022/03/bb852c31fffc075f97bfd0b66407b19d.GARAGE-DOOR-INSTALLATION.jpg"
           alt="header"
         />

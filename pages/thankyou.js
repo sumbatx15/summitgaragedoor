@@ -1,8 +1,7 @@
 import {
-  Box,
+  Button,
   Container,
   Heading,
-  HStack,
   Icon,
   Img,
   Stack,
@@ -10,17 +9,14 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
-import { CheckCircle } from "react-feather";
-import { Home } from "../src/components/Home";
+import { ArrowLeft } from "react-feather";
+import Lottie from "react-lottie";
+import checkLottieData from "../public/lottie/check.json";
+import Link from "next/link";
 
 export default function Thankyou() {
   const router = useRouter();
-  const timeout = useRef(0);
-  useEffect(() => {
-    timeout.current = setTimeout(() => router.push("/"), 1000);
-    return () => clearTimeout(timeout.current);
-  }, []);
+  // useTimeoutFn(() => router.push("/"), 2000);
 
   return (
     <>
@@ -32,14 +28,23 @@ export default function Thankyou() {
       <Container maxW="container.lg" textAlign="center">
         <Stack h="100vh" align="center" justify="center">
           <Img src="/logo.svg" h={"50px"} />
-          <HStack>
-            <Heading>Submitted</Heading>
-            <Icon as={CheckCircle} boxSize="2em" stroke="green.500" />
-          </HStack>
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: checkLottieData,
+            }}
+            height={300}
+            width={300}
+          />
+          <Heading>Submitted</Heading>
           <Text>
             Thank you for your submission, we will get back to you as soon as
             possible.
           </Text>
+          <Link href="/">
+            <Button leftIcon={<Icon as={ArrowLeft} />}>Back to home</Button>
+          </Link>
         </Stack>
       </Container>
     </>

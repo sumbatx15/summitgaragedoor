@@ -19,7 +19,9 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import axios from "axios";
 import { useRouter } from "next/router";
+import { useRef, useState } from "react";
 import {
   AtSign,
   Home,
@@ -29,12 +31,33 @@ import {
   Send,
   User,
 } from "react-feather";
+import emailjs from "@emailjs/browser";
 
 export const ContactUs = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter();
+  const form = useRef();
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    router.push("/thankyou");
+    setIsLoading(true);
+    emailjs
+      .sendForm(
+        "service_wil9j76",
+        "template_43rhxf9",
+        form.current,
+        "19mHlOqIF7Yeo0t3t"
+      )
+      .then(
+        () => {
+          setIsLoading(false);
+          router.push("/thankyou");
+        },
+        () => {
+          setIsLoading(false);
+        }
+      );
   };
 
   return (
@@ -50,17 +73,18 @@ export const ContactUs = () => {
             flex="1"
             spacing={4}
             as="form"
+            ref={form}
             onSubmit={handleSubmit}
           >
             <Heading as="h1" size="2xl">
               Write to us
             </Heading>
             <Stack
-              bg="gray.50"
-              border="1px"
-              borderColor="gray.200"
+              bg={["", "gray.50"]}
+              border={["none", "1px"]}
+              borderColor={["none", "gray.200"]}
               rounded="lg"
-              p={8}
+              p={[0, 8]}
               spacing={4}
               flex="1"
               direction={["column", "row"]}
@@ -98,17 +122,13 @@ export const ContactUs = () => {
                     </InputGroup>
                   </FormControl>
                   <FormControl>
-                    <FormLabel htmlFor="street-address">Address</FormLabel>
+                    <FormLabel htmlFor="address">Address</FormLabel>
                     <InputGroup>
                       <InputLeftElement
                         pointerEvents="none"
                         children={<Home size="1em" />}
                       />
-                      <Input
-                        bg="white"
-                        name="street-address"
-                        id="street-address"
-                      />
+                      <Input bg="white" name="address" id="address" />
                     </InputGroup>
                   </FormControl>
                   <FormControl flex="1.5" h="full">
@@ -126,11 +146,17 @@ export const ContactUs = () => {
                       maxH="full"
                       minH="100px"
                       id="message"
+                      name="message"
                       placeholder="Write a message..."
                     />
                   </FormControl>
                 </Stack>
-                <Button variant="ghost" size="lg" type="submit">
+                <Button
+                  isLoading={isLoading}
+                  variant="ghost"
+                  size="lg"
+                  type="submit"
+                >
                   <HStack color="primary.500">
                     <Send size="1em" />
                     <Text>Send</Text>
@@ -156,15 +182,15 @@ export const ContactUs = () => {
             </HStack>
           </Show>
 
-          <Stack flex="1" align="center">
-            {/* <Img
+          {/* <Stack flex="1" align="center">
+            <Img
               d="block"
               w="full"
               // src="https://img.freepik.com/free-vector/24-hours-service-icon-flat-style-all-day-business-service-vector-illustration-isolated-background-quick-service-time-sign-business-concept_157943-860.jpg?w=2000"
-              src="/logo.svg"
+              // src="/logo.svg"
               // src="https://www.davesgaragedoors.com/wp-content/uploads/2021/06/Garage-Door-Repair.jpg"
-              // src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-3147.jpg?w=2000"
-            /> */}
+              src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-3147.jpg?w=2000"
+            />
             <Button
               as="a"
               href="tel:+1-647-696-6639"
@@ -178,15 +204,13 @@ export const ContactUs = () => {
             >
               CALL US
             </Button>
-          </Stack>
+          </Stack> */}
 
-          {/* <Box
-            hidden
+          <Box
             alignSelf="center"
             rounded="2xl"
             overflow="hidden"
-            w="fit-content"
-            h="fit-content"
+            boxSize={["full"]}
             pos="relative"
             flex="1"
           >
@@ -223,17 +247,16 @@ export const ContactUs = () => {
               </Stack>
             </AbsoluteCenter>
 
-            <AspectRatio zIndex={0} ratio="1" flex="1">
-              <Img
-                w="full"
-                h="full"
-                // src="https://www.accessgaragedoors.com/wp-content/uploads/fix-garage-doors.jpg"
-                // src="https://utahgaragedoors.net/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/07/garage-door-openers-utah.jpg.webp"
-                // src="https://garagedoorindianapolis.com/uploads/content/local-repair.jpg"
-                src="https://overheadtampa.com/wp-content/uploads/elementor/thumbs/garage-door-repair-tampa-pf38jyufe2bi0njw1puxhmmfalmgwbmtjnapzgeu7k.jpg"
-              />
-            </AspectRatio>
-          </Box> */}
+            <Img
+              w="full"
+              h="full"
+              objectFit="cover"
+              // src="https://www.accessgaragedoors.com/wp-content/uploads/fix-garage-doors.jpg"
+              src="https://utahgaragedoors.net/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/07/garage-door-openers-utah.jpg.webp"
+              // src="https://garagedoorindianapolis.com/uploads/content/local-repair.jpg"
+              // src="https://overheadtampa.com/wp-content/uploads/elementor/thumbs/garage-door-repair-tampa-pf38jyufe2bi0njw1puxhmmfalmgwbmtjnapzgeu7k.jpg"
+            />
+          </Box>
         </Stack>
       </Container>
     </Box>

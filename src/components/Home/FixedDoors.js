@@ -17,7 +17,7 @@ export const FixedDoorsBanner = () => {
           <Stack spacing={0}>
             <Text>Within 25 years of work</Text>
             <Heading>We repaired about</Heading>
-            <Heading>15,000 Garage doors</Heading>
+            <Heading>15,000+ Garage doors</Heading>
             {/* <Img src="/garage-door.svg" alt="Doors" /> */}
           </Stack>
           <Text>Need a repair?</Text>
