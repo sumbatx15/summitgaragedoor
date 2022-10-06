@@ -16,47 +16,54 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Grid, HelpCircle, Home, MessageSquare, Phone, PhoneCall } from "react-feather";
+import {
+  Grid,
+  HelpCircle,
+  Home,
+  MessageSquare,
+  Phone,
+  PhoneCall,
+} from "react-feather";
 
 export const NavigationDrawer = ({ isOpen, onClose, ...props }) => {
   return (
     <Drawer isOpen={isOpen} placement="top" onClose={onClose} {...props}>
       <DrawerOverlay />
-      <DrawerContent bg="gray.800" color="white">
+      <DrawerContent bg="white" color="black">
         <DrawerCloseButton />
         <DrawerHeader>
-          <Img src="/logo-white.svg" h="10" />
+          <Img src="/logo.svg" h="10" />
         </DrawerHeader>
 
         <DrawerBody>
           <Stack w="full" align="stretch">
             <Link onClick={onClose} href="#header">
-              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
-                <Home color="var(--chakra-colors-white)" />
+              <HStack py="4" px="4" bg="gray.200" rounded="3xl">
+                <Home color="var(--chakra-colors-gray-500)" />
                 <Text>Home</Text>
               </HStack>
             </Link>
             <Link onClick={onClose} href="#services">
-              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
-                <Grid color="var(--chakra-colors-white)" />
+              <HStack py="4" px="4" bg="gray.200" rounded="3xl">
+                <Grid color="var(--chakra-colors-gray-500)" />
                 <Text>Services</Text>
               </HStack>
             </Link>
             <Link onClick={onClose} href="#whyus">
-              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
-                <HelpCircle color="var(--chakra-colors-white)" />
+              <HStack py="4" px="4" bg="gray.200" rounded="3xl">
+                <HelpCircle color="var(--chakra-colors-gray-500)" />
                 <Text>Why choose us</Text>
               </HStack>
             </Link>
             <Link onClick={onClose} href="#reviews">
-              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
-                <MessageSquare color="var(--chakra-colors-white)" />
+              <HStack py="4" px="4" bg="gray.200" rounded="3xl">
+                <MessageSquare color="var(--chakra-colors-gray-500)" />
                 <Text>Reviews</Text>
               </HStack>
             </Link>
             <Link onClick={onClose} href="#contact-us">
-              <HStack py="4" px="4" bg="gray.900" rounded="3xl">
-                <PhoneCall color="var(--chakra-colors-white)" />
+              <HStack py="4" px="4" bg="gray.200" rounded="3xl">
+                <PhoneCall color="var(--chakra-colors-gray-500)" />
                 <Text>Contact us</Text>
               </HStack>
             </Link>

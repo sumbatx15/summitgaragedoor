@@ -15,14 +15,20 @@ import { Phone } from "react-feather";
 export const WhyChooseUs = () => {
   return (
     <Box id="whyus" py="10">
-      <Container maxW="container.lg" py={[10]}>
+      <Container maxW="container.lg" py={{ base: 0, md: 10 }}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">
             <Heading size="2xl">Why choose us?</Heading>
-            <Text fontSize="xl">Great question</Text>
+            <Text fontSize="xl">Great question!</Text>
           </Stack>
           <Flex justify="center" align="start" wrap="wrap">
-            <Stack flex="1 1 350px" m="2" mb={10} align="center" textAlign="center">
+            <Stack
+              flex="1 1 350px"
+              m="2"
+              mb={10}
+              align="center"
+              textAlign="center"
+            >
               <Img src="calendar.svg" w="10" />
               <Heading size="md">24/7 Emergency service</Heading>
               <Text>
@@ -32,7 +38,13 @@ export const WhyChooseUs = () => {
               </Text>
             </Stack>
 
-            <Stack flex="1 1 350px" m="2" mb={10} align="center" textAlign="center">
+            <Stack
+              flex="1 1 350px"
+              m="2"
+              mb={10}
+              align="center"
+              textAlign="center"
+            >
               <Img src="tools.svg" w="10" />
               <Heading size="md">5 year warranty</Heading>
               <Text>
@@ -42,7 +54,13 @@ export const WhyChooseUs = () => {
               </Text>
             </Stack>
 
-            <Stack flex="1 1 350px" m="2" mb={10} align="center" textAlign="center">
+            <Stack
+              flex="1 1 350px"
+              m="2"
+              mb={10}
+              align="center"
+              textAlign="center"
+            >
               <Img src="badge.svg" w="10" />
               <Heading size="md">25 years of experience</Heading>
               <Text>
@@ -50,8 +68,14 @@ export const WhyChooseUs = () => {
                 that we have virtually seen it all in garage door services.
               </Text>
             </Stack>
-            
-            <Stack flex="1 1 350px" m="2" mb={10} align="center" textAlign="center">
+
+            <Stack
+              flex="1 1 350px"
+              m="2"
+              mb={10}
+              align="center"
+              textAlign="center"
+            >
               <Img src="piggy-bank.svg" w="10" />
               <Heading size="md">Best Prices in the Local Market</Heading>
               <Text>
@@ -59,8 +83,6 @@ export const WhyChooseUs = () => {
                 price in the local market
               </Text>
             </Stack>
-
-           
           </Flex>
         </Stack>
       </Container>

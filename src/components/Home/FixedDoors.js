@@ -1,8 +1,10 @@
 import {
   Box,
   Button,
+  Circle,
   Container,
   Heading,
+  HStack,
   Img,
   Stack,
   Text,
@@ -21,18 +23,26 @@ export const FixedDoorsBanner = () => {
             {/* <Img src="/garage-door.svg" alt="Doors" /> */}
           </Stack>
           <Text>Need a repair?</Text>
-          <Button
-            as="a"
-            href="tel:+1-647-696-6639"
-            size="lg"
-            colorScheme="primary"
-            rounded="full"
-            py="7"
-            maxW="md"
-            leftIcon={<Phone />}
-          >
-            CALL US: 647-696-6639
-          </Button>
+          <Stack align="center" spacing="1">
+              <Button
+                as="a"
+                href="tel:+1-647-696-6639"
+                size="lg"
+                colorScheme="primary"
+                rounded="full"
+                py="7"
+                w="xs"
+                maxW="xs"
+                leftIcon={<Phone />}
+              >
+                CALL US
+              </Button>
+              <HStack spacing="4px">
+                <Circle bg="green.400" size="2" />
+                <Text color="green.400">Open</Text>
+                <Text fontSize="xs">24/7 Emergency Service</Text>
+              </HStack>
+            </Stack>
         </Stack>
       </Container>
     </Box>

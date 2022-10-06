@@ -4,14 +4,13 @@ import { Review } from "../Review";
 export const Reviews = (props) => {
   return (
     <Box id="reviews" py="10">
-      <Container maxW="container.lg" py={[10]}>
+      <Container maxW="container.lg" py={{base: 0, md: 10}}>
         <Stack spacing="10">
           <Stack spacing="0" textAlign="center">
             {/* <Square size="14" mx="auto">
               <Img src="/reviews.svg" w="full" />
             </Square> */}
             <Heading size="2xl">Customers reviews</Heading>
-            <Text fontSize="xl">Our garage door repair services include</Text>
           </Stack>
           <Stack direction={["column", "column", "row"]}>
             <Review

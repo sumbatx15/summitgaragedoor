@@ -5,6 +5,7 @@ import {
   Container,
   Flex,
   HStack,
+  Icon,
   Img,
   Stack,
   Text,
@@ -12,6 +13,7 @@ import {
 import Link from "next/link";
 import { Phone } from "react-feather";
 import { useMouseWheel, useScroll, useWindowScroll } from "react-use";
+import LogoSvg from "../assets/logo.svg";
 
 export const Navbar = (props) => {
   const { x, y } = useWindowScroll();
@@ -30,9 +32,10 @@ export const Navbar = (props) => {
     >
       <Container maxW="container.lg">
         <Flex align="center">
-          <HStack spacing="10">
+          <HStack spacing="10" fontSize="16px">
             <Stack spacing="0">
-              <Img src="/logo.svg" h={"50px"} transition="height 50ms" />
+              <Icon color="primary.500" w="138px" h={"50px"} as={LogoSvg} />
+              {/* <Img src="/logo.svg"  transition="height 50ms" /> */}
             </Stack>
             <Link href="#header">Home</Link>
             <Link href="#services">Services</Link>

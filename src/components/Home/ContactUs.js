@@ -62,7 +62,7 @@ export const ContactUs = () => {
 
   return (
     <Box id="contact-us" py="10">
-      <Container experimental_spaceY={4} maxW="container.lg" py={[10]}>
+      <Container experimental_spaceY={4} maxW="container.lg" py={{base: 0, md: 10}}>
         <Stack
           align="center"
           spacing="10"

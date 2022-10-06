@@ -6,7 +6,8 @@ import { ContactUs } from "./ContactUs";
 import { FixedDoorsBanner } from "./FixedDoors";
 import { Footer } from "./Footer";
 import { Gallery } from "./Gallery";
-import { Header } from "./Header";
+import { HeaderA } from "./HeaderA";
+import { HeaderB } from "./HeaderB";
 import { Reviews } from "./Reviews";
 import { Services } from "./Services";
 import { WhyChooseUs } from "./WhyChooseUs";
@@ -24,7 +25,8 @@ export const Home = () => {
         spacing="0"
         divider={<Divider />}
       >
-        <Header h={["auto", "100vh"]} />
+        <HeaderB h={["auto"]} />
+        {/* <HeaderA h={["auto"]} /> */}
         <Services />
         <WhyChooseUs />
         <FixedDoorsBanner />
